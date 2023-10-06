@@ -13,7 +13,7 @@ public class Home {
 
             System.out.println("-----------MENU---------");
             System.out.println("Escolha  uma opção: ");
-            System.out.println("[1] - Cadastrar Caneta\n[2] - Status Caneta\n[3] - Editar Caneta");
+            System.out.println("[1] - Cadastrar Caneta\n[2] - Status Caneta\n[3] - Editar Caneta\n[0] - Sair");
             menu = scn.nextInt();
 
             if(menu == 1){
@@ -45,7 +45,7 @@ public class Home {
                 if(caneta == null){
                     System.out.println("Não existe caneta cadastrada");
                 }else{
-                    caneta.status();
+                    caneta.status(); //DENTRO DESSE METODO, EXISTE GETS PARA TRAZER AS INFORMAÇÕES
                 }
 
             } else if (menu == 3) {
@@ -65,7 +65,7 @@ public class Home {
                     System.out.print("A caneta está tampada? (Ex: true/false) ");
                     boolean tampada = scn.nextBoolean();
 
-                    caneta.setMarca(marca);
+                    caneta.setMarca(marca);  //UTILIZA OS SET DA CLASSE CANETA PARA ALTERAR OS VALORES AOS ATRIBUTOS
                     caneta.setModelo(modelo);
                     caneta.setCor(cor);
                     caneta.setPonta(ponta);
@@ -73,7 +73,9 @@ public class Home {
                     System.out.println("Caneta Editada!");
                 }
 
-            } else{
+            }  else if (menu == 0) {
+                System.out.println("Encerrando");
+            }else{
                 System.out.println("Opção Invalida");
             }
         }while (menu != 0);
