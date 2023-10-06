@@ -1,4 +1,4 @@
-package estudos;
+package cadastrarCaneta;
 
 import java.util.Scanner;
 

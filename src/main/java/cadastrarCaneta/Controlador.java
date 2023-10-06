@@ -1,4 +1,4 @@
-package estudos;
+package cadastrarCaneta;
 
 public interface Controlador {
     public void escrever();
